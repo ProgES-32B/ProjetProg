@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constRecycCity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ciel"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/textWCity"
+        android:layout_width="380dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:text="City"
+        android:textColor="@color/mWhite"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textWStatus"
+        android:layout_width="84dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:text="Status"
+        android:textColor="@color/mWhite"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textWCity"
+        app:layout_constraintStart_toStartOf="@+id/textWCity"
+        app:layout_constraintTop_toTopOf="@+id/textWCity" />
+
+    <TextView
+        android:id="@+id/textWDeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_thin"
+        android:text="36°"
+        android:textColor="@color/mWhite"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="@+id/textWCity"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/textWCity"
+        app:layout_constraintTop_toBottomOf="@+id/textWStatus" />
+
+    <TextView
+        android:id="@+id/textWDay"
+        android:layout_width="83dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="left"
+        android:text="Dimanche"
+        android:textColor="@color/mWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWDeg" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Aujourd'hui"
+        android:textColor="@color/mWhite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textWDay"
+        app:layout_constraintStart_toEndOf="@+id/textWDay"
+        app:layout_constraintTop_toTopOf="@+id/textWDay"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <TextView
+        android:id="@+id/textWMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="22"
+        android:textColor="@color/mWhite"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textWMax"
+        app:layout_constraintTop_toTopOf="@+id/textWMax" />
+
+    <TextView
+        android:id="@+id/textWMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="32"
+        android:textColor="@color/mWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hourlyWeather"
+        android:layout_width="382dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:isScrollContainer="false"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWMin" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="117dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Lever du soleil"
+        android:textAllCaps="true"
+        android:textColor="#FAFAFA"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/hourlyWeather"
+        app:layout_constraintTop_toBottomOf="@+id/hourlyWeather" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="135dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Coucher du soleil"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/hourlyWeather"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="66dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="7:53"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="66dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="20:53"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

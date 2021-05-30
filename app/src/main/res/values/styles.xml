@@ -1,0 +1,33 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#5598CC</item>
+        <item name="colorPrimaryDark">#5598CC</item>
+        <item name="colorAccent">#5598CC</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="myFullscreenAlertDialogStyle" parent="Theme.AppCompat.Light.DarkActionBar">      //no actionbar, but status bar exists
+        <item name="colorPrimary">@color/searchBar</item>
+        <item name="colorPrimaryDark">@color/searchBar</item>
+        <item name="colorAccent">@color/searchBar</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>        //smooth animation
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+
+    <style name="CustomSearchView" parent="android:Theme.Holo">
+        <item name="searchIcon">@drawable/ic_baseline_search_24</item>
+        <item name="queryBackground">@null</item>
+        <item name="searchHintIcon">@null</item>
+        <item name="editTextColor">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="hintTextColor">@color/colorWhite</item>
+    </style>
+</resources>
